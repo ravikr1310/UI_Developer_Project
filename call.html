@@ -1,0 +1,34 @@
+n <!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>call() and apply()</title>
+</head>
+
+<body>
+
+
+<div id="div"></div>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+<script>
+var parent = {
+	forparent:function(){
+		return this.firstName + " " + this.lastName;
+	}
+}
+
+var parent1 = {
+	firstName: "Ravi",
+	lastName: "Kumar"
+}
+
+var parent2 = {
+	firstName: "Dipip",
+	lastName: "Soni"
+}
+
+document.write(parent.forparent.call(parent2));
+</script>
+</body>
+
+</html>

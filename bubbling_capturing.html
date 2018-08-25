@@ -1,0 +1,27 @@
+<html>
+<head>
+<meta charset="UTF-8">
+<title>bubbling capturing</title>
+</head>
+
+<body>
+
+<form id="formId">form
+	<div >div
+		<p >P</p>
+	</div>
+</form>
+
+<script type="text/javascript">
+function test(){
+formId.onclick = function(event){
+	event.target.style.color = "red";
+	alert(event.target.tagName);
+}
+}
+test();
+	
+</script>
+</body>
+
+</html>

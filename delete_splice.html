@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Delete and Splice in Array Methods</title>
+</head>
+
+<body>
+<script>
+
+var arr = [2,4,2,8,5,1];
+arr.sort();
+console.log(arr);
+
+delete arr[1]; // remain holes i.e empty
+console.log();
+
+
+arr.splice(1,1); // without remain any holes
+console.log(arr);
+
+</script>
+</body>
+
+</html>

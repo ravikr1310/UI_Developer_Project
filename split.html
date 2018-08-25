@@ -1,0 +1,40 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Program One</title>
+<link href="css/style.css" media="all" rel="Stylesheet" type="text/css" />
+</head>
+
+<body>
+
+  <div class="main-container" id="container">    
+    
+  </div>
+
+<script type="text/javascript">
+	debugger;
+	var str = 'banana';
+	var str_arr = str.split('');
+	var new_arr_ele = '';
+	var text = '';
+	var newStr = '';
+	for(var i = 0; i <= str_arr.length; i++){
+		debugger;
+		text = str_arr[i];
+		if(i%2 ==0){
+			debugger;
+			text = text.toUpperCase();
+		}
+
+		newStr += text;
+		console.log(newStr);
+	}
+	//return newStr;
+
+</script>
+<!-- <script type="text/javascript" src="js/script-json.js"></script> -->
+</body>
+
+</html>

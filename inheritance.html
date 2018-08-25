@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Inheritance without prototype</title>
+</head>
+
+<body>
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+<script>
+
+function parentClass(){
+	var name = "Ram"; // local variable
+	this.address = "Shalimar Bagh"; // global variable
+	this.details = function(){
+		return this.name + " " + this.address;
+	}
+}
+
+function childClass(){
+	this.inheritanceFromParentClass = parentClass;
+	this.inheritanceFromParentClass();
+
+	this.method1 = function(){
+		return "From child class";
+	}
+}
+
+function subChildClass(){
+	this.inheritanceFromChildClass= childClass;
+	this.inheritanceFromChildClass();
+}
+
+var obj = new childClass();
+console.log(obj.name + " " + obj.address); // name cannot be inherite due to decleared as a local variable
+console.log(obj.details());
+
+var obj1 = new subChildClass();
+console.log("SubChild: " + obj1.address);
+
+</script>
+</body>
+
+</html>

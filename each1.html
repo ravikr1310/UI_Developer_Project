@@ -1,0 +1,34 @@
+ <!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Inheritance without prototype</title>
+</head>
+
+<body>
+
+<ul>
+	<li>A</li>
+	<li>B</li>
+	<li>C</li>
+</ul>
+
+<div id="div"></div>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+<script>
+$(document).ready(function(){
+	debugger;
+	var arr = [100,300,543,654,233];
+	var divObj = document.getElementById('div');
+	var result = "";
+	$.each(arr, function(index,text){
+		result+= index + " " + text + "<br>";
+	});
+	$(divObj).html(result);
+});
+
+
+</script>
+</body>
+
+</html>

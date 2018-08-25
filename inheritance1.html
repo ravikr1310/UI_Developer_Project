@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Inheritance with prototype</title>
+</head>
+
+<body>
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+<script>
+
+function parentClass(){
+	var name = "Ravi";
+	this.age =45; 
+	this.details = function(){
+		return name + " " + this.age;
+	}
+}
+
+
+function childClass(){
+	this.address = "Shalimar";
+	this.details1 = function(){
+		return this.address;
+	}
+}
+
+// inheritance parent class property to child class
+childClass.prototype = new parentClass();
+var obj_child = new childClass();
+console.log(obj_child.details());
+
+
+
+// inheritance child class property to parent class
+parentClass.prototype = new childClass();
+var obj_parent = new parentClass();
+console.log(obj_parent.address);
+
+</script>
+</body>
+
+</html>
